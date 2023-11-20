@@ -1,0 +1,8 @@
+export { default as plane } from './airplane.png'
+export {default as BGDemand} from './on-deman.jpg'
+export {default as path}from './path.png'
+export {default as cannes} from './cannes.avif'
+export {default as ibiza} from './ibiza.avif'
+export {default as paris} from './paris.avif'
+export {default as barcelona} from './barcelona.avif'
+export {default as FM} from './flight-manager.avif'

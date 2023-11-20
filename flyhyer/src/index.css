@@ -9,3 +9,10 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+a:hover div h2{
+  transform: translateY(0%);
+}
+
+a:hover div p{
+  opacity: 1;
+}

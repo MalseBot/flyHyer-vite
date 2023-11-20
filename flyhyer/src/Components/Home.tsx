@@ -1,9 +1,8 @@
-import { useEffect, useState } from 'react';
-import plane from '../assets/airplane.png';
-import BGDemand from '../assets/on-deman.jpg';
-import path from '../assets/path.PNG'
+import { useEffect, useState } from 'react'
+import { plane, BGDemand, path,barcelona,cannes,paris,ibiza,FM } from '../assets'
 import '../index.css'
 const Home = () => {
+  const [picVeiwed, setPicVeiwed] = useState(cannes)
   const [fadeIn, setFadeIn] = useState(
     'opacity-0 -translate-y-full transition-all overflow-hidden'
   )
@@ -116,8 +115,8 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className=' h-screen flex flex-col mx-4 md:grid md:grid-cols-4 md:grid-rows-2 py-4 border-t border-t-main border-opacity-25 md:gap-3'>
-        <h2 className=' text-3xl font-bold mb-5 row-span-2 col-span-2 md:text-5xl'>
+      <div className=' h-full md:h-screen flex flex-col mx-4 md:grid md:grid-cols-4 md:grid-rows-2 py-4 border-t border-t-main border-opacity-25 md:gap-3'>
+        <h2 className=' text-6xl font-bold mb-5 row-span-2 col-span-2 md:text-6xl'>
           We believe that in a world where passengers have become numbers, a
           personal approach is key to ensure you get the most out of your flying
           experience.
@@ -151,29 +150,98 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className=' h-screen flex flex-col md:grid md:grid-cols-3 font-bold text-second'>
-        <div  className='flex flex-col justify-between bg-grab h-full p-10'>
-          <h2 className=' text-5xl'>Flexible <br />Services</h2>{' '}
-          <div ><p className='m-5'>Smart solutions for all your charter requirements</p>
-          <button className='p-2 text-lg hover:bg-second hover:text-main duration-200  border rounded-full border-second'>All Solutions</button></div>
+      <div className=' grid grid-flow-row grid-rows-3 md:grid-rows-1 md:grid md:grid-cols-3 font-bold text-second'>
+        <div className='flex flex-col justify-between bg-grab h-full p-10'>
+          <h2 className=' text-5xl'>
+            Flexible <br />
+            Services
+          </h2>{' '}
+          <div>
+            <p className='m-5'>
+              Smart solutions for all your charter requirements
+            </p>
+            <button className='p-2 text-lg hover:bg-second hover:text-main duration-200  border rounded-full border-second'>
+              All Solutions
+            </button>
+          </div>
         </div>
-        <a href='' className=' h-full relative'>
-          <img src={BGDemand} className=' -z-10 absolute h-full ' alt='' />
-          <h2 className=' text-3xl'>On-Demand</h2>{' '}
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At fuga
-            numquam iste sed molestiae.
-          </p>
+        <a className=' h-full relative flex flex-col justify-end'>
+          <img
+            src={BGDemand}
+            className=' -z-10 absolute h-full w-full '
+            alt=''
+          />
+          <div className='p-5'>
+            <h2 className=' text-3xl translate-y-full duration-500 transition-all'>
+              On-Demand
+            </h2>{' '}
+            <p className='opacity-0 duration-500 transition-all'>
+              Book your aircraft. Customize all aspects of your journey.
+            </p>
+          </div>
         </a>
-        <a href='' className=' bg-grab2 h-full'>
-          <img src={path} alt='' />
-          <h2 className=' text-3xl'>hello</h2>{' '}
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-            mollitia quis magnam aspernatur! Accusamus, praesentium.
-          </p>
+        <a className=' p-5 bg-grab2 h-full flex md:flex-col justify-between items-end'>
+          <img src={path} alt='' className='' />
+          <div className=''>
+            <h2 className=' text-3xl translate-y-full duration-500 transition-all'>
+              hello
+            </h2>{' '}
+            <p className=' opacity-0 duration-500 transition-all'>
+              Fly private for a fraction of the price
+            </p>
+          </div>
         </a>
       </div>
+      <div className=' m-28'>
+        <h2 className=' text-5xl font-bold text-grab my-4'>
+          Popular Destinations
+        </h2>
+        <div className='flex flex-row '>
+          <img src={picVeiwed} alt='' className='w-1/2 md:block hidden' />
+          <div className='grid grid-cols-2'>
+            <div
+              onMouseEnter={() => setPicVeiwed(barcelona)}
+              className=' border-t border-main border-opacity-30 m-2 flex flex-col justify-between border-b rounded-br-2xl'>
+              <h3 className=' text-2xl font-bold m-2'>Barcelona {`(GRO)`}</h3>
+              <h4>Spain</h4>
+            </div>
+            <div
+              onMouseEnter={() => setPicVeiwed(ibiza)}
+              className=' border-t border-main border-opacity-30 m-2 flex flex-col justify-between border-b rounded-br-2xl'>
+              <h3 className=' text-2xl font-bold m-2'>Ibiza {`(IBZ)`}</h3>
+              <h4>Spain</h4>
+            </div>
+            <div
+              onMouseEnter={() => setPicVeiwed(cannes)}
+              className=' border-t border-main border-opacity-30 m-2 flex flex-col justify-between border-b rounded-br-2xl'>
+              <h3 className=' text-2xl font-bold m-2'>Cannes {`(CEQ)`}</h3>
+              <h4>France</h4>
+            </div>
+            <div
+              onMouseEnter={() => setPicVeiwed(paris)}
+              className=' border-t border-main border-opacity-30 m-2 flex flex-col justify-between border-b rounded-br-2xl'>
+              <h3 className=' text-2xl font-bold m-2'>Paris {`(LBG)`}</h3>
+              <h4>France</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className=' h-screen grid md:grid-flow-col grid-rows-2 grid-flow-row md:grid-rows-1 md:grid-cols-2'>
+        <div className=' flex justify-center bg-grab2sec'>
+          <img src={FM} alt='' />
+        </div>
+        <div className='flex flex-col justify-between bg-grab text-second p-10 '>
+          <h2 className=' text-5xl font-bold'>Flight Manager</h2>
+          <p className=' text-lg'>
+            All of our flights come with complimentary Flight Manager Service.
+            Your dedicated Flight Manager ensures that every detail of your
+            flight is taken care of and you get the most competitive tailor-made
+            offers. Speak with your Flight Manager in English 🇬🇧, Dutch 🇳🇱,
+            German 🇩🇪, Spanish 🇪🇸 or Portuguese 🇵🇹.{' '}
+          </p>
+        </div>
+      </div>
+      <div></div>
     </div>
   )
 }
