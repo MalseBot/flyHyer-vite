@@ -1,5 +1,27 @@
 import { useEffect, useState } from 'react'
-import { plane, BGDemand, path,barcelona,cannes,paris,ibiza,FM } from '../assets'
+import {
+  plane,
+  BGDemand,
+  path,
+  barcelona,
+  cannes,
+  paris,
+  ibiza,
+  FM,
+  cabin,
+  customerReclining,
+  flyhyer,
+  insideHeavyJet,
+  luxuryBusinessJetCabin,
+  womanOnABusinessJetB,
+} from '../assets'
+import { Carousel } from 'react-responsive-carousel'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { FaRegAddressCard } from 'react-icons/fa'
+import { IoMdPhonePortrait } from 'react-icons/io'
+import { LuLeaf } from 'react-icons/lu'
+import { PiPlusMinus, PiShoppingBag } from 'react-icons/pi'
+import { HiFingerPrint } from 'react-icons/hi2'
 import '../index.css'
 const Home = () => {
   const [picVeiwed, setPicVeiwed] = useState(cannes)
@@ -74,17 +96,17 @@ const Home = () => {
           <div
             className={`${fadeIn} duration-1000 md:flex col-span-2 justify-center gap-4 items-start text-xl  hidden`}>
             <a
-              href=''
+              href='./Solutions'
               className=' hover:border-opacity-100 border-opacity-0 border-b-main border-b duration-300 '>
               Solution
             </a>
             <a
-              href=''
+              href='./Aboutus'
               className=' hover:border-opacity-100 border-opacity-0 border-b-main border-b duration-300 '>
               About
             </a>
             <a
-              href=''
+              href='./Contact'
               className=' hover:border-opacity-100 border-opacity-0 border-b-main border-b duration-300 '>
               Contact
             </a>
@@ -241,7 +263,118 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div></div>
+      <div className='grid md:grid-cols-4 grid-cols-1 m-16 gap-5 justify-items-start'>
+        <h2 className=' text-6xl md:text-9xl font-bold md:col-span-4'>
+          Hyer® <br /> Experience
+        </h2>
+        <p className=' text-lg md:col-span-2 md:w-2/3'>
+          Experience At Hyer® we are bold. The aircraft is just a tool we use to
+          get you where you want to be. Our clients enjoy much more value for
+          their investment, accessing unparalleled personalisation when flying
+          private. <br /> We offer{' '}
+          <span className=' font-bold'>personalised experiences</span> with our{' '}
+          <span className=' font-bold'>on-demand</span>
+          charters and{' '}
+          <span className=' font-bold'>personalised flexibility</span> with our
+          exclusive <span className=' font-bold'>shared flight.</span> We
+          upgrade the way you fly.
+        </p>
+        <div className='flex flex-col items-start'>
+          <div className='p-5 text-5xl border-dashed rounded-br-3xl  border-main  border-opacity-60 border'>
+            <FaRegAddressCard />
+          </div>
+          <h3 className=' text-2xl font-bold my-5'>Rewarding Membership</h3>
+          <p>
+            Our membership blends the advantage of a jet card with the easiness
+            of a loyalty program. Get access to services not available anywhere
+            without hefty fees.
+          </p>
+        </div>
+        <div className='md:flex flex-col items-start hidden '>
+          <div className='p-5 text-5xl border-dashed rounded-br-3xl  border-main  border-opacity-60 border'>
+            <IoMdPhonePortrait />
+          </div>
+          <h3 className=' text-2xl font-bold my-5'>Digital Care</h3>
+          <p>
+            We don't do business as if it was the 80's. Receive instant
+            estimates online. Get a quote with one click. Book your aircraft via
+            a seamless process.
+          </p>
+        </div>
+        <div className='flex flex-col items-start'>
+          <div className='p-5 text-5xl border-dashed rounded-br-3xl  border-main  border-opacity-60 border'>
+            <PiPlusMinus />
+          </div>
+          <h3 className=' text-2xl font-bold my-5'>Aircraft ownership</h3>
+          <p>
+            Our team is ready to assist in discovering if ownership of an
+            aircraft could be something for you. Let us help you with a shared
+            ownership construction together with like-minded clients.
+          </p>
+        </div>
+        <div className='flex flex-col items-start'>
+          <div className='p-5 text-5xl border-dashed rounded-br-3xl  border-main  border-opacity-60 border'>
+            <LuLeaf />
+          </div>
+          <h3 className=' text-2xl font-bold my-5'>CO2 Neutral Flights</h3>
+          <p>
+            We play our part to ensure a more sustainable future. Via Hyer® CO2
+            offset program, clients can offset the entire emission of their
+            flights.
+          </p>
+        </div>
+        <div className='hidden md:flex flex-col items-start'>
+          <div className='p-5 text-5xl border-dashed rounded-br-3xl  border-main  border-opacity-60 border'>
+            <PiShoppingBag />
+          </div>
+          <h3 className=' text-2xl font-bold my-5'>Service Add-ons</h3>
+          <p>
+            Avoid hidden fees and pay only for the service that you need.
+            Upgrade your flight with multiple add-ons. Shape your trip to meet
+            your requirements.
+          </p>
+        </div>
+        <div className='hidden md:flex flex-col items-start'>
+          <div className='p-5 text-5xl border-dashed rounded-br-3xl  border-main  border-opacity-60 border'>
+            <HiFingerPrint />
+          </div>
+          <h3 className=' text-2xl font-bold my-5'>Personal Flight Manager</h3>
+          <p>
+            Our experts can support any trip and request, 24/07. From short
+            business trips to large groups crossing the globe for leisure. Enjoy
+            a stress-free booking process.
+          </p>
+        </div>
+        <button className='block bg-main text-lg font-bold px-4 p-2 rounded-full text-second hover:bg-opacity-90 duration-200'>
+          Book an Aircraft
+        </button>
+      </div>
+      <Carousel className=' md:m-28 '>
+        <div className=' '>
+          <img className=' w-full h-full' src={cabin} alt='' />
+        </div>
+        <div className=' '>
+          <img className=' w-full h-full' src={customerReclining} alt='' />
+        </div>
+        <div className=''>
+          <img className=' w-full h-full' src={insideHeavyJet} alt='' />
+        </div>
+        <div>
+          <img className=' w-full h-full' src={luxuryBusinessJetCabin} alt='' />
+        </div>
+        <div>
+          <img className=' w-full h-full' src={womanOnABusinessJetB} alt='' />
+        </div>
+        <div>
+          <img className=' w-full h-full' src={flyhyer} alt='' />
+        </div>
+      </Carousel>
+      <div className='flex flex-col items-center my-16'>
+        <p className=' text-2xl font-bold text-main opacity-50'>What are you waiting for ?</p>
+        <button className=' text-9xl font-bold border-b-4 border-b-main border-opacity-0 hover:border-opacity-100 duration-200 p-1'>
+          Book a flight
+        </button>
+      </div>
     </div>
   )
 }

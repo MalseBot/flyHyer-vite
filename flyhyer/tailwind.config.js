@@ -26,6 +26,9 @@ export default {
         apear: 'apear 5s ease-in',
         'bounce-slow': 'bounce 15s ease infinite',
       },
+      borderRadius:{
+        '4xl':'3rem'
+      },
     },
     colors: {
       main: '#000D10',

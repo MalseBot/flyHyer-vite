@@ -16,3 +16,6 @@ a:hover div h2{
 a:hover div p{
   opacity: 1;
 }
+.rounded-br-custome-1{
+  border-radius: 0 0 150px 0 ;
+}
