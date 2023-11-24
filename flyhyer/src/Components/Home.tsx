@@ -370,7 +370,9 @@ const Home = () => {
         </div>
       </Carousel>
       <div className='flex flex-col items-center my-16'>
-        <p className=' text-2xl font-bold text-main opacity-50'>What are you waiting for ?</p>
+        <p className=' text-2xl font-bold text-main opacity-50'>
+          What are you waiting for ?
+        </p>
         <button className=' text-9xl font-bold border-b-4 border-b-main border-opacity-0 hover:border-opacity-100 duration-200 p-1'>
           Book a flight
         </button>

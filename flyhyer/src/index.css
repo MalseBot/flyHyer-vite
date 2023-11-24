@@ -2,20 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
-body{
+body {
   overflow-x: hidden;
 }
 * {
   font-family: 'Montserrat', sans-serif;
 }
 
-a:hover div h2{
+a:hover div h2 {
   transform: translateY(0%);
 }
 
-a:hover div p{
+a:hover div p {
   opacity: 1;
 }
-.rounded-br-custome-1{
-  border-radius: 0 0 150px 0 ;
+.rounded-br-custome-1 {
+  border-radius: 0 0 150px 0;
+}
+.aftero {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -moz-calc(100% + 1px);
+  left: calc(100% + 1px);
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #8aadb2;
+  border: 1px solid #000d10;
 }

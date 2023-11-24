@@ -218,7 +218,6 @@ const Solutions = () => {
           </div>
         </div>
       </div>
-      solutions
     </div>
   )
 }
