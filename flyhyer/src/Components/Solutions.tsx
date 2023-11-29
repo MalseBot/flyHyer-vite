@@ -8,15 +8,10 @@ import {
   hyerHorizon,
   hyerPay,
 } from '../assets'
+import { useGlobalContext } from '../Context'
 const Solutions = () => {
-  const [fadeIn, setFadeIn] = useState(
-    'opacity-0 -translate-y-full transition-all overflow-hidden'
-  )
-  const [apear, setApear] = useState('opacity-0')
-  useEffect(() => {
-    setFadeIn('opacity-100 translate-y-0 transition-all overflow-hidden')
-    setApear('opacity-100')
-  }, [])
+    const { fadeIn } = useGlobalContext()
+
   return (
     <div>
       <div className='relative w-full md:h-screen h-auto mb-10 '>

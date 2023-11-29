@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { shutterStock, max, held,onPlane } from '../assets'
 import { CiUnlock } from 'react-icons/ci'
 import { GoPeople } from 'react-icons/go'
@@ -10,14 +9,10 @@ import { FaArrowUp, FaArrowDown } from 'react-icons/fa'
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import '../index.css'
+import { useGlobalContext } from '../Context'
 const Aboutus = () => {
-  const [fadeIn, setFadeIn] = useState(
-    'opacity-0 -translate-y-full transition-all overflow-hidden'
-  )
+    const { fadeIn, } = useGlobalContext()
 
-  useEffect(() => {
-    setFadeIn('opacity-100 translate-y-0 transition-all overflow-hidden')
-  }, [])
   return (
     <div className=' bg-about-BG'>
       <div className='grid md:grid-cols-7 relative z-10 mx-10 border-b text-main gap-14 md:gap-0 md:grid-rows-4 md:p-10  h-max'>

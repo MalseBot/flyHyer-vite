@@ -182,9 +182,9 @@ const Navbar = () => {
               If you are interested in becoming a member, please click the
               button below.
             </p>
-            <button className='text-second p-2 bg-main transition-all duration-150 px-5 m-10 mt-0 rounded-3xl text-lg'>
+            <a href='./Elevate' className='text-second p-2 bg-main transition-all duration-150 px-5 m-10 mt-0 rounded-3xl text-lg'>
               View Elevate Membership
-            </button>
+            </a>
           </div>
           <div className={sharedShow ? 'visible' : 'hidden'}>
             <h2 className=' text-center text-5xl font-bold bg-main text-second p-10'>

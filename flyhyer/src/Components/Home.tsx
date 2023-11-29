@@ -23,16 +23,10 @@ import { LuLeaf } from 'react-icons/lu'
 import { PiPlusMinus, PiShoppingBag } from 'react-icons/pi'
 import { HiFingerPrint } from 'react-icons/hi2'
 import '../index.css'
+import { useGlobalContext } from '../Context'
 const Home = () => {
   const [picVeiwed, setPicVeiwed] = useState(cannes)
-  const [fadeIn, setFadeIn] = useState(
-    'opacity-0 -translate-y-full transition-all overflow-hidden'
-  )
-  const [apear, setApear] = useState('opacity-0')
-  useEffect(() => {
-    setFadeIn('opacity-100 translate-y-0 transition-all overflow-hidden')
-    setApear('opacity-100')
-  }, [])
+  const {fadeIn,apear}=useGlobalContext();
 
   return (
     <div>
