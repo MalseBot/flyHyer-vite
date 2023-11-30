@@ -4,7 +4,10 @@ import { BiSolidPlane } from 'react-icons/bi'
 import { FaBars } from 'react-icons/fa'
 import { CiLocationOn } from 'react-icons/ci'
 import { GoPeople } from 'react-icons/go'
+import { useAsyncError, useNavigate } from 'react-router-dom'
+
 const Navbar = () => {
+  const navigate = useNavigate()
   const [fadeIn, setFadeIn] = useState(
     'opacity-0 -translate-y-full transition-all overflow-hidden duration-1000'
   )
@@ -126,7 +129,9 @@ const Navbar = () => {
                 </li>
                 <li>
                   {' '}
-                  <button className=' border-b-second border-b transition-all duration-300 hover:border-b-main text-xl'>
+                  <button
+                    onClick={()=>navigate('./News')}
+                    className=' border-b-second border-b transition-all duration-300 hover:border-b-main text-xl'>
                     News
                   </button>
                 </li>
@@ -182,7 +187,9 @@ const Navbar = () => {
               If you are interested in becoming a member, please click the
               button below.
             </p>
-            <a href='./Elevate' className='text-second p-2 bg-main transition-all duration-150 px-5 m-10 mt-0 rounded-3xl text-lg'>
+            <a
+              href='./Elevate'
+              className='text-second p-2 bg-main transition-all duration-150 px-5 m-10 mt-0 rounded-3xl text-lg'>
               View Elevate Membership
             </a>
           </div>
