@@ -83,7 +83,7 @@ const Navbar = () => {
               <ul>
                 <li>
                   {' '}
-                  <button className=' border-b-second border-b transition-all duration-300 hover:border-b-main text-xl'>
+                  <button onClick={()=>navigate('./Shared')} className=' border-b-second border-b transition-all duration-300 hover:border-b-main text-xl'>
                     Avalible flights
                   </button>
                 </li>
