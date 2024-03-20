@@ -11,7 +11,7 @@ FlyHyer alternative is a copy of flyhyer.com website but i made it all by myself
 
 ## Technologies
 I used React.js , Tailwind Framework, three.js
-React-sript, Swiper, Three drei + fiber, react-icons, react-spring, tailwind
+ , Swiper, Three drei + fiber, react-icons, react-spring.
 ### Font & Color pallette
 main:#000D10
 
